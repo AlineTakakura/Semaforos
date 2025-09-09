@@ -14,17 +14,25 @@
     <h1>Exclusão mútua - IPC</h1>
     <h2>🚦 Semáforos</h2>
     <h3> O que é algoritmo de exclusão mútua </h3>
-    <p> O que é exclusão mútua, é uma técnica utilizada para impedir evitar que dois processos ou threads tenham acesso simultâneamente a um mesmo recurso, sendo esse recurso denominado seção crítica. Um dos algoritmos mais simples de exclusão mútua é o semáforo binário. </p>
-    <h3> Em que consiste o algoritmo de semáforos </h3>
-    <p>Um semáforo é um mecanismo utilizado para controlar e sincronizar o acesso a recursos compartilhados, garantindo que múltiplas tarefas ou processos não utilizem o mesmo recurso ao mesmo tempo de forma indevida. Ele é fundamental para resolver problemas de exclusão mútua, evitando condições de corrida.</p>
+    <p>É uma técnica utilizada para evitar que dois processos ou threads tenham acesso simultâneamente a um mesmo recurso, sendo esse recurso denominado seção crítica. Um dos algoritmos mais simples de exclusão mútua é o semáforo binário. </p>
+    <h3> Em que consiste o algoritmo de semáforos binários</h3>
+    <p>Um semáforo binário é um mecanismo utilizado para controlar e sincronizar o acesso a recursos compartilhados, garantindo que múltiplas tarefas ou processos não utilizem o mesmo recurso ao mesmo tempo de forma indevida. Ele é fundamental para resolver problemas de exclusão mútua, evitando condições de corrida.</p>
     <p>Existem duas operações principais sobre semáforos:</p>
-    <p>Trancamento (Down ou Wait/P): operação que bloqueia o acesso ao recurso. Caso o semáforo já esteja ocupado, a tarefa deve esperar até que ele seja liberado.</p>
-    <p>Destrancamento (Up ou Signal/V): operação que libera o recurso, permitindo que outras tarefas aguardando possam acessá-lo.</p>
+    <ul>
+      <li>Trancamento (Down ou Wait/P): Operação que bloqueia o acesso ao recurso. Caso o semáforo já esteja ocupado, a tarefa deve esperar até que ele seja liberado.</li>
+      <li>Destrancamento (Up ou Signal/V): operação que libera o recurso, permitindo que outras tarefas aguardando possam acessá-lo.</li>
+    </ul>
+  
     <p>Essas operações normalmente são implementadas pelo núcleo do sistema operacional através de System Calls. É essencial que não ocorram acessos concorrentes ao próprio semáforo durante essas operações, evitando disputas sobre o mesmo.</p>
-    <p>Princípio de Funcionamento Uma tarefa não pode acessar um recurso compartilhado sem antes bloquear o semáforo que protege o acesso a esse recurso.Para bloquear o semáforo, é necessário aguardar que ele esteja livre.Quando a tarefa finaliza o uso do recurso compartilhado, deve liberar o semáforo de proteção.</p>
-    <p>down(semáforo)- Verifica se o valor do semáforo é maior que 0 -Se for, semáforo=semáforo - 1 -Se não for, o processo que executou o down bloqueia </p>
-    <p>up(semáforo)- semáforo=semáforo + 1 -Se há processos bloqueados nesse semáforo, escolhe um deles e o desbloqueia  Nesse caso, o valor do semáforo permanece o mesmo</p>
-    <img src="imagem/semaforo.png" alt="Semáforo" width="300">
+    <h3>Pricípio de Funcionamento</h3>
+    <p>Uma tarefa não pode acessar um recurso compartilhado sem antes bloquear o semáforo que protege o acesso a esse recurso.Para bloquear o semáforo, é necessário aguardar que ele esteja livre.Quando a tarefa finaliza o uso do recurso compartilhado, deve liberar o semáforo de proteção.</p>
+    <ul>
+      <li>down(semáforo)- Verifica se o valor do semáforo é maior que 0 -Se for, semáforo=semáforo - 1 -Se não for, o processo que executou o down bloqueia</li>
+      <li>up(semáforo)- semáforo=semáforo + 1 -Se há processos bloqueados nesse semáforo, escolhe um deles e o desbloqueia  Nesse caso, o valor do semáforo permanece o mesmo</li>
+    </ul>
+    
+    
+    <img src="imagem/espera-circular.png" alt="Semáforo" width="300">
   </div>
   <div class="container">
     <p>Demonstração do código</p>
