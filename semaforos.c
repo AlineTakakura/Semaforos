@@ -34,9 +34,9 @@ int main(){
         if(contador_tempos == 0){
             char placeholder[20] = " ";
             printf("TEMPO %d (Estado inicial)\n", contador_tempos);
-            printf("%-14s %-12s %-12s %-12s\n", "Processo 1", "Semaforo", "Vez de", "Processo 2");
-            printf("%-14s %-12d %-12d %-12s\n", p1.estado, semaforo, vez_de, p2.estado);
-            printf("Executando: %-12d %-15s Executando: %-12d\n\n",contador_execucao1,placeholder,contador_execucao2);
+            printf("%-35s %-35s %-35s %-35s\n", "Processo 1", "Semaforo", "Vez de", "Processo 2");
+            printf("%-35s %-35d %-35d %-35s\n", p1.estado, semaforo, vez_de, p2.estado);
+            printf("Executando: %-57d %-37s Executando: %-12d\n\n",contador_execucao1,placeholder,contador_execucao2);
         }
         else{
             if(contador_execucao1 == p1.tempo_utilizar_recurso){
@@ -70,11 +70,12 @@ int main(){
                     vez_de =1;
                 } 
             }
+           
             char placeholder[20] = " ";
-            printf("TEMPO %d (Estado inicial)\n", contador_tempos);
-            printf("%-14s %-12s %-12s %-12s\n", "Processo 1", "Semaforo", "Vez de", "Processo 2");
-            printf("%-14s %-12d %-12d %-12s\n", p1.estado, semaforo, vez_de, p2.estado);
-            printf("Executando: %-12d %-15s Executando: %-12d\n\n",contador_execucao1,placeholder,contador_execucao2);
+            printf("TEMPO %d\n", contador_tempos);
+            printf("%-35s %-35s %-35s %-35s\n", "Processo 1", "Semaforo", "Vez de", "Processo 2");
+            printf("%-35s %-35d %-35d %-35s\n", p1.estado, semaforo, vez_de, p2.estado);
+            printf("Executando: %-57d %-37s Executando: %-12d\n\n",contador_execucao1,placeholder,contador_execucao2);
         }
         
         char esperar;
