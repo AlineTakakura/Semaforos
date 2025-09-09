@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #4076fd, #d3e2fa);
+  color: #f1f5f9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.container h2{
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.editor {
+  flex: 1;
+  display: flex;
+}
+
+div[data-pym-src] {
+  flex: 1;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.explicacao h1,
+.explicacao h2,
+.explicacao h3,
+.explicacao p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.explicacao h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white; 
+  text-align: center;
+  margin-bottom: 18px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+.explicacao h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fbbf24;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.explicacao h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #34d399;
+  margin: 14px 0 8px;
+  border-left: 4px solid #34d399;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.explicacao p {
+  font-size: 1rem;
+  color: #f1f5f9;
+  text-align: justify;
+  max-width: 850px;
+  margin: 0 auto 12px;
+  line-height: 1.8;
+}
+
+.topico {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.explicacao img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .explicacao h1 {
+    font-size: 1.6rem;
+  }
+  .explicacao h2 {
+    font-size: 1.3rem;
+  }
+  .explicacao h3 {
+    font-size: 1.1rem;
+  }
+  div[data-pym-src] {
+    border-radius: 8px;
+  }
+}
